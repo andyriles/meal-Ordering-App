@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+    <script src="https://use.fontawesome.com/952e0337bd.js"></script>
+  </head>
+  <body>
+    <div class="pageloader"></div>
+    <div class="well"></div>
+      <img src="Images/Splurge.png" />
+      <h1>Splurge</h1>
+    </div>
+
+    <form action="" method="post" class="login">
+      <h1 class="login-title">Login</h1>
+
+      <input
+        type="text"
+        class="login-input"
+        placeholder="Email Adress"
+        autofocus
+      />
+
+      <input type="password" class="login-input" placeholder="Password" />
+
+      <input type="submit" value="Lets Go" class="login-button" />
+    </form>
+    <br />
+
+    <p class="footNote">
+      New to Splurge? Click <a href="register.html">here</a> to register
+    </p>
+
+    <script type="text/javascript">
+      $(window).load(function() {
+        $(".pageloader").fadeOut("slow");
+      });
+    </script>
+  </body>
+</html>
