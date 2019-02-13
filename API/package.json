@@ -1,0 +1,24 @@
+{
+  "name": "meal-booking-api",
+  "version": "1.0.0",
+  "description": "APi for our meal booking app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyriles/meal-Ordering-App.git"
+  },
+  "keywords": [
+    "meal",
+    "food",
+    "chow"
+  ],
+  "author": "Efurhievwe Andrew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andyriles/meal-Ordering-App/issues"
+  },
+  "homepage": "https://github.com/andyriles/meal-Ordering-App#readme"
+}
