@@ -26,4 +26,4 @@ const MEalService = {
   }
 };
 
-export default MealServices;
+export default MEalService;
