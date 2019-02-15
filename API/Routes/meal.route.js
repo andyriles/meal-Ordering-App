@@ -6,5 +6,7 @@ const router = Router();
 router.get("/", Mealcontroller.fetchAllMeals);
 router.post("/", Mealcontroller.addAMeal);
 router.get("/:id", Mealcontroller.getSingleMeal);
+router.put("/:id", Mealcontroller.updateMeal);
+router.delete("/:id", Mealcontroller.deleteAMeal);
 
 export default router;
