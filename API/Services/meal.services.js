@@ -7,8 +7,6 @@ const MEalService = {
       const newMeal = new Meal();
       newMeal.id = meal.id;
       newMeal.name = meal.name;
-      newMeal.quantity = meal.quantity;
-      newMeal.price = meal.price;
       return newMeal;
     });
     return validMeals;
@@ -34,8 +32,6 @@ const MEalService = {
     } else {
       Meal.id = meal.id;
       Meal.name = meal.name;
-      Meal.quantity = meal.quantity;
-      Meal.price = meal.price;
     }
     return Meal;
   },
@@ -47,8 +43,6 @@ const MEalService = {
     } else {
       delete Meal.id;
       delete Meal.name;
-      delete Meal.quantity;
-      delete Meal.price;
     }
   }
 };
