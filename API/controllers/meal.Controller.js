@@ -13,7 +13,7 @@ const Mealcontroller = {
 
   addAMeal(req, res) {
     const newMeal = req.body;
-    const createdMeal = MEalService.addAMeal(newMeal);
+    const createdMeal = MEalService.addMeal(newMeal);
     return res
       .json({
         status: "success",
@@ -24,13 +24,13 @@ const Mealcontroller = {
 
   getSingleMeal(req, res) {
     const id = req.params.id;
-    const singleMeal = MEalService.getSingleMeal(id);
+    const singleMeal = MEalService.getAMeal(id);
     return res
       .json({
         status: "success",
         data: singleMeal
       })
-      .status(201);
+      .status(200);
   }
 };
 
