@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meal-Booking-App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script src="https://use.fontawesome.com/952e0337bd.js"></script>
+  </head>
+  <body>
+    <div class="pageloader "></div>
+    <div class="well">
+      <img src="Images/Splurge.png" />
+      <h1>Splurge</h1>
+    </div>
+
+    <nav class="navbar">
+      <ul>
+        <li>
+          <a class="active" href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="menu.html">Menu</a>
+        </li>
+        <li>
+          <a href="Order.html">Order</a>
+        </li>
+
+        <div class="floatSideways">
+          <li>
+            <a href="login.html">Login</a>
+          </li>
+          <li>
+            <a href="register.html">Register</a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+
+    <form action="" method="post" class="login">
+      <h1 class="login-title">Add meal</h1>
+
+      <input type="text" class="login-input" placeholder="Add Meal" autofocus />
+
+      <input type="submit" value="Add" class="login-button" />
+    </form>
+    <br />
+
+    <script type="text/javascript">
+      $(window).load(function() {
+        $(".pageloader").fadeOut("slow");
+      });
+    </script>
+  </body>
+</html>

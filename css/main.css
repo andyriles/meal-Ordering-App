@@ -332,3 +332,16 @@ h1.login-title {
     padding: 10px 0;
   }
 }
+.checkout {
+  font-weight: bolder;
+  color: white;
+  margin-left: 50px;
+}
+.checkout h1,
+.checkout h2 {
+  color: red;
+}
+
+.checkout li {
+  font-size: 20px;
+}
