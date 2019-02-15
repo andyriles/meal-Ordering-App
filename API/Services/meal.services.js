@@ -25,7 +25,31 @@ const MEalService = {
 
   getAMeal(id) {
     const meal = dummyData.meals.find(meal => meal.id == id);
-    return meal || [];
+    return meal || ["This food item does not exist"];
+  },
+  updateAmeal(meal, id) {
+    const Meal = dummyData.meals.find(meal => meal.id == id);
+    if (!Meal) {
+      return ["This food item does not exist"];
+    } else {
+      Meal.id = meal.id;
+      Meal.name = meal.name;
+      Meal.quantity = meal.quantity;
+      Meal.price = meal.price;
+    }
+    return Meal;
+  },
+
+  deleteAmeal(id) {
+    var Meal = dummyData.meals.find(meal => meal.id == id);
+    if (!Meal) {
+      return ["This food item does not exist"];
+    } else {
+      delete Meal.id;
+      delete Meal.name;
+      delete Meal.quantity;
+      delete Meal.price;
+    }
   }
 };
 
