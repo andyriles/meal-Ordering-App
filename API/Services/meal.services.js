@@ -12,39 +12,54 @@ const MEalService = {
     return validMeals;
   },
 
+
   addMeal(meal) {
     const mealLength = dummyData.meals.length;
     const lastId = dummyData.meals[mealLength - 1].id;
     const newId = lastId + 1;
     meal.id = newId;
     dummyData.meals.push(meal);
-    return meal;
+    return dummyData.meals;
   },
 
   getAMeal(id) {
     const meal = dummyData.meals.find(meal => meal.id == id);
-    return meal || ["This food item does not exist"];
-  },
-  updateAmeal(meal, id) {
-    const Meal = dummyData.meals.find(meal => meal.id == id);
-    if (!Meal) {
-      return ["This food item does not exist"];
+    if (meal) {
+      return meal;
     } else {
-      Meal.id = meal.id;
-      Meal.name = meal.name;
+      return `Meal with id: ${id} does not exist`
     }
-    return Meal;
+
+  },
+  updateAmeal(id, meal) {
+    const checkId = parseInt(id, Number);
+    const newMealList = dummyData.meals.filter(meal => meal.id !== checkId);
+    const idAvailable = (dummyData.meals.length !== newMealList.length);
+    const editedMeal = {
+      id: checkId,
+      name: meal.name,
+    };
+    if (idAvailable) {
+      dummyData.meals = [editedMeal, ...newMealList];
+    }
+    return {
+      idAvailable,
+      editedMeal,
+    };
   },
 
   deleteAmeal(id) {
-    var Meal = dummyData.meals.find(meal => meal.id == id);
-    if (!Meal) {
-      return ["This food item does not exist"];
+    const checkId = parseInt(id, Number);
+    const newMealList = dummyData.meals.filter(meal => meal.id !== checkId);
+    const idAvailable = (dummyData.meals.length !== newMealList.length);
+    dummyData.meals = newMealList;
+
+    if (id) {
+      return idAvailable;
     } else {
-      delete Meal.id;
-      delete Meal.name;
+      return `Meal with id: ${id} unavailable`;
     }
-  }
+  },
 };
 
 export default MEalService;
