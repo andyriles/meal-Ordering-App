@@ -10,20 +10,27 @@ const orderServices = {
     const newId = lastId + 1;
     order.id = newId;
     dummyData.orders.push(order);
-    return order;
+    return dummyData.orders;
   },
   //put
   updateOrder(order, id) {
-    const Order = dummyData.orders.find(order => order.id == id);
-    if (!Order) {
-      return ["This food item does not exist"];
-    } else {
-      Order.id = order.id;
-      Order.name = order.name;
-      Order.price = order.price;
-      Order.quantity = Order.quantity;
+    const checkOrderId = parseInt(id, Number);
+    const newOrderList = dummyData.orders.filter(order => order.id !== checkOrderId);
+    const orderIdAvailable = (dummyData.orders.length !== newOrderList.length);
+    const editedOrder = {
+      id: checkOrderId,
+      name: order.name,
+      quantity: order.quantity,
+      price: order.price,
+    };
+    if (orderIdAvailable) {
+      dummyData.orders = [editedOrder, ...newOrderList]
     }
-    return Order;
+    return {
+      editedOrder,
+      orderIdAvailable,
+    };
+
   },
   //get
   getAllOrders() {

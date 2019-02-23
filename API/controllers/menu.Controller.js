@@ -7,6 +7,7 @@ const menuController = {
     const Menu = menuServices.getMenu(id);
     return res
       .json({
+        status: "success",
         data: Menu
       })
       .status(200);
@@ -15,11 +16,12 @@ const menuController = {
   addMenu(req, res) {
     const newMenu = req.body;
     const createdMenu = menuServices.addMenu(newMenu);
+    res.status(201)
     return res
       .json({
+        status: "new menu successfully created",
         data: createdMenu
-      })
-      .status(201);
+      });
   },
   fetchAllMenu(req, res) {
     const allMenu = menuServices.getAllMenu();

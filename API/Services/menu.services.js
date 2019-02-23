@@ -13,7 +13,7 @@ const menuServices = {
     const newId = lastId + 1;
     menu.id = newId;
     dummyData.menu.push(menu);
-    return menu;
+    return dummyData.menu;
   },
 
   //for ease of access

@@ -7,6 +7,7 @@ const orderController = {
     const allOrders = orderServices.getAllOrders();
     return res
       .json({
+        status: "success",
         data: allOrders
       })
       .status(200);
@@ -15,11 +16,13 @@ const orderController = {
   placeorder(req, res) {
     const newOrder = req.body;
     const CreatedOrder = orderServices.placeorder(newOrder);
+    res.status(201);
     return res
       .json({
+        status: "success",
         data: CreatedOrder
       })
-      .status(201);
+
   },
 
   updateOrder(req, res) {
@@ -27,11 +30,27 @@ const orderController = {
     const UpdatedOrder = req.body;
 
     const Update = orderServices.updateOrder(UpdatedOrder, id);
-    return res
-      .json({
-        data: Update
-      })
-      .status(200);
+    let response = {};
+    let status = 0;
+    if (Update.orderIdAvailable) {
+      response = {
+        ...response,
+        status: 'success',
+        message: `Order with id: ${id} edited successfully.`,
+        data: Update.editedOrder,
+      };
+      status = 202;
+    } else {
+      response = {
+        ...response,
+        status: 'error',
+        message: `Order with id: ${id} not found`,
+      };
+      status = 404;
+    }
+    return res.status(status).json({
+      response
+    })
   }
 };
 
