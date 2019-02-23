@@ -12,7 +12,7 @@ export default {
   ],
 
   meals: [
-    { id: 1, name: "Bread and Beans " },
+    { id: 1, name: "Bread and egg " },
     { id: 2, name: "Jollof rice and Chicken" },
     { id: 3, name: "Yam and stew" },
     { id: 4, name: "Plantain and eggs" },
