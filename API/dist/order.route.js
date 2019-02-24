@@ -7,7 +7,7 @@ exports.default = void 0;
 
 var _express = require("express");
 
-var _order = _interopRequireDefault(require("../controllers/order.controller"));
+var _order = _interopRequireDefault(require("../../controllers/order.controller"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
