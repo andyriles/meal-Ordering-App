@@ -1,0 +1,48 @@
+{
+  "name": "meal-booking-api",
+  "version": "1.0.0",
+  "description": "APi for our meal booking app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js",
+    "test": "mocha tests/*.test.js --recursive --require @babel/register --timeout 10000 --exit",
+    "test-watch": "nodemon --exec \"npm test\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyriles/meal-Ordering-App.git"
+  },
+  "keywords": [
+    "meal",
+    "food",
+    "chow"
+  ],
+  "author": "Efurhievwe Andrew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andyriles/meal-Ordering-App/issues"
+  },
+  "homepage": "https://github.com/andyriles/meal-Ordering-App#readme",
+  "dependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-core": "7.0.0-bridge.0",
+    "coveralls": "^3.0.3",
+    "eslint-plugin-import": "^2.16.0",
+    "express": "^4.16.4",
+    "istanbul": "~0.2.4",
+    "nyc": "^13.3.0",
+    "supertest": "^3.4.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "body-parser": "^1.18.3",
+    "chai": "^3.5.0",
+    "chai-http": "^4.2.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "expect": "^24.1.0",
+    "mocha": "^6.0.1",
+    "nodemon": "^1.18.10"
+  }
+}
