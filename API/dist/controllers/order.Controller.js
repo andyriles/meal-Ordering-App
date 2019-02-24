@@ -5,9 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _order = _interopRequireDefault(require("../Services/order.services"));
+var _order = _interopRequireDefault(require("../../Services/order.services"));
 
-var _dummyData = _interopRequireDefault(require("../Utilities/dummyData"));
+var _dummyData = _interopRequireDefault(require("../../Utilities/dummyData"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
