@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node index.js",
-    "build": "babel API/*.js -d dist",
+    "build": "babel index.js -d dist",
     "test": "mocha tests/*.test.js --recursive --require @babel/register --timeout 10000 --exit",
     "test-watch": "nodemon --exec \"npm test\""
   },
