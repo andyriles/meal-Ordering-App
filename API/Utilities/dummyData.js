@@ -19,7 +19,7 @@ export default {
     { id: 5, name: "Pap and akara" },
     { id: 6, name: "Yam and eggs" },
     { id: 7, name: "Fried rice and fish" },
-    { id: 8, name: "Amala and Ewedu" },
+    { id: 8, name: "Eba and Ewedu" },
     { id: 9, name: "White Rice and stew" }
   ],
 
