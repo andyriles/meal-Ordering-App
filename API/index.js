@@ -1,8 +1,8 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const router = require("./Routes/meal.route");
-const mealroutes = require("./Routes/menu.route");
-const orderRoutes = require("./Routes/order.route");
+import express from 'express';
+import bodyParser from 'body-parser';
+import router from './Routes/meal.route';
+import mealroutes from './Routes/menu.route';
+import orderRoutes from './Routes/order.route';
 
 const app = express();
 
