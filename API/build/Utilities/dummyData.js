@@ -17,7 +17,7 @@ var _default = {
     price: "500"
   }, {
     id: 3,
-    name: "Yam and stew",
+    name: "Yam and eggs",
     quantity: "6",
     price: "400"
   }, {
