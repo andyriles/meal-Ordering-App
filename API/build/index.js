@@ -18,7 +18,7 @@ var _order = _interopRequireDefault(require("./Routes/order.route"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = (0, _express.default)();
-var PORT = 3000;
+var PORT = process.env.PORT
 app.use(_bodyParser.default.json());
 app.get('/', function (req, res) {
   res.send('The API is set');
