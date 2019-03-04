@@ -35,18 +35,29 @@ Test-Driven Development
 * Mocha, Chai and Supertest for api route testing
 
 Available APIs
-HTTP REQUEST VERB	API ENDPOINT/PATH	ACTION
+
 GET	/api/v1/	Welcomes users to the application
-POST	/api/v1/user/signup	Registers a new user on the app
-POST	/api/v1/user/login	Logs in a registered user
+
+POST	/api/v1/auth/signup	Registers a new user on the app
+
+POST	/api/v1/auth/login	Logs in a registered user
+
 POST	/api/v1/meal	Allows admin to create a meal
+
 PUT	/api/v1/meal/:id	Allows admin to update a specific meals
+
 DELETE	/api/v1/meal/:id	Allows an admin to delete a specific meal
+
 PATCH	/api/v1/menu/:id	Allows an add a meal to the day's menu
+
 GET	/api/v1/menu	Allows a user to get the current menu
+
 DELETE	/api/v1/menu	Allows the admin to remove an item from the day's menu
+
 POST	/api/v1/order	Allows a user to creat a meal order
+
 PUT	/api/v1/meal/:id	Allows admin/user to update a specific meal order
+
 GET	/api/v1/order	Allows admin/user to get their respective meal orders
 
 License and Copyright
