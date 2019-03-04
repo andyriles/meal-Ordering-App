@@ -11,7 +11,7 @@ module.exports = {
     },
     {
       Name: 'Fried Rice and Chicken',
-      Quantity: '3',
+      Quantity: '4',
       Price: '1400',
       createdAt: now,
       updatedAt: now
