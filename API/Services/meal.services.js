@@ -1,5 +1,5 @@
 import dummyData from "../Utilities/dummyData";
-import Meal from "../models/meal.models";
+import Meal from "../models/meal";
 
 const MEalService = {
   fetchAllMeals() {

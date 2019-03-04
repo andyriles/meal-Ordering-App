@@ -1,6 +1,6 @@
 import dummyData from "../Utilities/dummyData";
-import orders from "../models/order.models";
-import Orders from "../models/order.models";
+import orders from "../models/order";
+import Orders from "../models/order";
 
 const orderServices = {
   //Post

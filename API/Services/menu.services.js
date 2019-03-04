@@ -1,5 +1,5 @@
 import dummyData from "../Utilities/dummyData";
-import Menu from "../models/menu.models";
+import Menu from "../models/menu";
 //for the caterer and customer
 const menuServices = {
   getMenu(id) {
