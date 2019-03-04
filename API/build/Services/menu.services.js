@@ -7,7 +7,7 @@ exports.default = void 0;
 
 var _dummyData = _interopRequireDefault(require("../Utilities/dummyData"));
 
-var _menu = _interopRequireDefault(require("../models/menu.models"));
+var _menu = _interopRequireDefault(require("../models/menu"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
