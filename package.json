@@ -4,11 +4,13 @@
   "description": "APi for our meal booking app",
   "main": "index.js",
   "scripts": {
-    "start": " babel-node index.js",
+    "start": "npm run build && node ./build/index.js",
+    "build-babel": "babel -d ./build controllers models Routes Services tests Utilities index.js",
     "dev-start": "nodemon --exec babel-node ./index.js",
-    "build": "babel API/*.js -d dist",
+    "build": "npm run build-babel",
     "test": "mocha tests/*.test.js --recursive --require @babel/register --timeout 10000 --exit",
-    "test-watch": "nodemon --exec \"npm test\""
+    "test-watch": "nodemon --exec \"npm test\"",
+    "sequelize": "./node_modules/.bin/babel-node ./node_modules/.bin/sequelize $*"
   },
   "repository": {
     "type": "git",
@@ -30,11 +32,17 @@
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
     "babel-core": "7.0.0-bridge.0",
+    "bcryptjs": "^2.4.3",
     "coveralls": "^3.0.3",
+    "dotenv": "^6.2.0",
+    "ejs": "^2.6.1",
     "eslint-plugin-import": "^2.16.0",
     "express": "^4.16.4",
-    "istanbul": "~0.2.4",
+    "jwt-simple": "^0.5.5",
     "nyc": "^13.3.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
     "supertest": "^3.4.2"
   },
   "devDependencies": {
@@ -45,6 +53,10 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "expect": "^24.1.0",
     "mocha": "^6.0.1",
-    "nodemon": "^1.18.10"
+    "nodemon": "^1.18.10",
+    "pg": "^7.8.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.43.0",
+    "sequelize-cli": "^5.4.0"
   }
 }
