@@ -16,15 +16,24 @@ API
 
 Structure of the backend
 *The API folder holds the backend code
+
 *The config folder holds the postgress connection configuration
+
 *The models folder holds the models to be use in the project
+
 *The controller file holds the code for handling requests 
+
 *The routes folder holds the files for the routes
+
 *The tests folder holds the files for integrated tests
+
 *The utils folder holds helper functions often reused accross the app such as the
 response transformer function.
+
 *The migrations folder holds the migration history to the database
+
 *The build folder contains all the transpiled code done with babel
+
 *The seeders folder contains sample data used to seed the database
 
 Continuous Integration
